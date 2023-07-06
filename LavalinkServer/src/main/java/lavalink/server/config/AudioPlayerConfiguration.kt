@@ -7,9 +7,9 @@ import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.bandcamp.BandcampAudioSourceManager
-import com.sedmelluq.discord.lavaplayer.source.beam.BeamAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.local.LocalAudioSourceManager
+import com.sedmelluq.discord.lavaplayer.source.nico.NicoAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.soundcloud.*
 import com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager
 import com.sedmelluq.discord.lavaplayer.source.vimeo.VimeoAudioSourceManager
@@ -137,6 +137,23 @@ class AudioPlayerConfiguration {
             if (playlistLoadLimit != null) youtube.setPlaylistPageCount(playlistLoadLimit)
 
             audioPlayerManager.registerSourceManager(youtube)
+        }
+        if (sources.isNiconico) {
+            val niconicoConfig = serverConfig.niconicoConfig
+            if (niconicoConfig != null) {
+                if (niconicoConfig.email.isNotBlank() && niconicoConfig.password.isNotBlank()) {
+                    audioPlayerManager.registerSourceManager(
+                        NicoAudioSourceManager(
+                            niconicoConfig.email,
+                            niconicoConfig.password
+                        )
+                    )
+                } else {
+                    log.warn("Email and password fields are blank, Media uploaded to niconico cannot be played.")
+                }
+            } else {
+                log.warn("Email and password fields are blank, Media uploaded to niconico cannot be played.")
+            }
         }
         if (sources.isSoundcloud) {
             val dataReader = DefaultSoundCloudDataReader()

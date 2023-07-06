@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component
 @Component
 data class AudioSourcesConfig(
     var isYoutube: Boolean = true,
+    var isNiconico: Boolean = true,
     var isBandcamp: Boolean = true,
     var isSoundcloud: Boolean = true,
     var isTwitch: Boolean = true,

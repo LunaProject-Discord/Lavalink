@@ -1,5 +1,7 @@
 # Lavalink
 
+This is forked version of LavaPlayer, original repo here https://github.com/lavalink-devs/Lavalink
+
 <img align="right" src="/branding/lavalink.svg" width=200 alt="Lavalink logo">
 
 A standalone audio sending node based on [Lavaplayer](https://github.com/sedmelluq/lavaplayer) and [Koe](https://github.com/KyokoBot/koe).

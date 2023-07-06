@@ -13,6 +13,7 @@ lavalink:
     password: "youshallnotpass"
     sources:
       youtube: true
+      niconico: true
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -50,6 +51,9 @@ lavalink:
     #youtubeConfig: # Required for avoiding all age restrictions by YouTube, some restricted videos still can be played without.
       #email: "" # Email of Google account
       #password: "" # Password of Google account
+    #niconicoConfig: # Account information is required to play media uploaded to niconico.
+      #email: "" # Email of niconico
+      #password: "" # Password of niconico
     #httpConfig: # Useful for blocking bad-actors from ip-grabbing your music node and attacking it, this way only the http proxy will be attacked
       #proxyHost: "localhost" # Hostname of the proxy, (ip or domain)
       #proxyPort: 3128 # Proxy port, 3128 is the default for squidProxy

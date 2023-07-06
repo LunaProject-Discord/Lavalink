@@ -46,6 +46,7 @@ class ServerConfig {
     var isSoundcloudSearchEnabled = true
     var ratelimit: RateLimitConfig? = null
     var youtubeConfig: YoutubeConfig? = null
+    var niconicoConfig: NiconicoConfig? = null
     var httpConfig: HttpConfig? = null
     var filters: Map<String, Boolean> = mapOf()
 }
