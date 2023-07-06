@@ -56,7 +56,7 @@ dependencies {
     implementation(libs.bundles.udpqueue.natives)
 
     implementation(libs.lavaplayer)
-    // implementation(libs.lavaplayer.ip.rotator)
+    implementation(libs.lavaplayer.ip.rotator)
 
     implementation(libs.lavadsp)
     implementation(libs.kotlin.reflect)
