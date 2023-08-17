@@ -42,17 +42,17 @@ fun VersionCatalogBuilder.spring() {
 }
 
 fun VersionCatalogBuilder.voice() {
-    version("lavaplayer", "1.4.1")
+    version("lavaplayer", "v1.4.4-original")
 
-    library("lavaplayer", "com.github.Cosgy-Dev.lavaplayer-cosgy", "lavaplayer").versionRef("lavaplayer")
-    library("lavaplayer-ip-rotator", "com.github.Cosgy-Dev.lavaplayer-cosgy", "lavaplayer-ext-youtube-rotator").versionRef("lavaplayer")
+    library("lavaplayer", "com.github.LunaProject-Discord.lavaplayer", "lavaplayer").versionRef("lavaplayer")
+    library("lavaplayer-ip-rotator", "com.github.LunaProject-Discord.lavaplayer", "lavaplayer-ext-youtube-rotator").versionRef("lavaplayer")
     library("lavadsp", "dev.arbjerg", "lavadsp").version("0.7.8")
 
     library("koe", "moe.kyokobot.koe", "core").version("2.0.0-rc1")
     library("koe-udpqueue", "moe.kyokobot.koe", "ext-udpqueue").version("2.0.0-rc1")
 
-    version("udpqueue", "0.2.6")
-    val platforms = listOf("linux-x86-64", "linux-x86", "linux-aarch64", "linux-arm", "win-x86-64", "win-x86", "darwin")
+    version("udpqueue", "0.2.7")
+    val platforms = listOf("linux-x86-64", "linux-x86", "linux-aarch64", "linux-arm", "linux-musl-x86-64", "linux-musl-aarch64", "win-x86-64", "win-x86", "darwin")
     platforms.forEach {
         library("udpqueue-native-$it", "club.minnced", "udpqueue-native-$it").versionRef("udpqueue")
     }

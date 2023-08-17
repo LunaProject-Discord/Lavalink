@@ -4,7 +4,7 @@ This is forked version of LavaPlayer, original repo here https://github.com/lava
 
 <img align="right" src="/branding/lavalink.svg" width=200 alt="Lavalink logo">
 
-A standalone audio sending node based on [Lavaplayer](https://github.com/sedmelluq/lavaplayer) and [Koe](https://github.com/KyokoBot/koe).
+A standalone audio sending node based on [Lavaplayer](https://github.com/lavalink-devs/lavaplayer) and [Koe](https://github.com/KyokoBot/koe).
 Allows for sending audio without it ever reaching any of your shards.
 
 Being used in production by FredBoat, Dyno, LewdBot, and more.
