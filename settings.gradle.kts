@@ -42,7 +42,7 @@ fun VersionCatalogBuilder.spring() {
 }
 
 fun VersionCatalogBuilder.voice() {
-    version("lavaplayer", "v1.4.4-original")
+    version("lavaplayer", "v1.4.5-original")
 
     library("lavaplayer", "com.github.LunaProject-Discord.lavaplayer", "lavaplayer").versionRef("lavaplayer")
     library("lavaplayer-ip-rotator", "com.github.LunaProject-Discord.lavaplayer", "lavaplayer-ext-youtube-rotator").versionRef("lavaplayer")
